@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Sample.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 21:24:25 by julien            #+#    #+#             */
-/*   Updated: 2025/04/30 07:41:42 by julien           ###   ########.fr       */
+/*   Created: 2025/04/30 07:58:32 by julien            #+#    #+#             */
+/*   Updated: 2025/04/30 08:05:36 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Sample.class.hpp"
 #include <iostream>
 
-int	main(void)
+Sample::Sample(void)
 {
-	char	buffer[512];
+	std::cout << "Constructor called" << std::endl;
+	this->Foo = 42;
+	std::cout << "this->Foo: " << this->Foo << std::endl;
+	this->Bar();
 
-	std::cout << "Hello world !" << std::endl;
-	std::cout << "Input a word: ";
-	std::cin >> buffer;
-	std::cout << "You entered: [" << buffer << "]" << std::endl;
-	return (0);
+	return ;
+}
+
+Sample::~Sample(void)
+{
+	std::cout << "Destructor called" << std::endl;
+	return ;
+}
+
+void	Sample::Bar(void)
+{
+	std::cout << "Member function called" << std::endl;
+	return ;
 }

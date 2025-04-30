@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 21:24:25 by julien            #+#    #+#             */
-/*   Updated: 2025/04/30 07:41:42 by julien           ###   ########.fr       */
+/*   Created: 2025/04/30 07:40:29 by julien            #+#    #+#             */
+/*   Updated: 2025/04/30 07:56:06 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef SAMPLE_CLASS_H
+# define SAMPLE_CLASS_H
 
-int	main(void)
+class Sample
 {
-	char	buffer[512];
+	public:
+		int	Foo;
 
-	std::cout << "Hello world !" << std::endl;
-	std::cout << "Input a word: ";
-	std::cin >> buffer;
-	std::cout << "You entered: [" << buffer << "]" << std::endl;
-	return (0);
-}
+		Sample(void);
+		~Sample(void);
+
+		void	Bar(void);
+};
+
+#endif

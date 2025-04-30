@@ -6,12 +6,12 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 21:52:51 by julien            #+#    #+#             */
-/*   Updated: 2025/04/29 22:01:42 by julien           ###   ########.fr       */
+/*   Updated: 2025/04/30 07:59:15 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Sample.class.hpp"
+#include <iostream>
 
 Sample::Sample(void)
 {

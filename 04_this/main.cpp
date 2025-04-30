@@ -5,20 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 21:24:25 by julien            #+#    #+#             */
-/*   Updated: 2025/04/30 07:41:42 by julien           ###   ########.fr       */
+/*   Created: 2025/04/30 08:04:54 by julien            #+#    #+#             */
+/*   Updated: 2025/04/30 08:08:29 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Sample.class.hpp"
 
 int	main(void)
 {
-	char	buffer[512];
+	Sample	instance;
 
-	std::cout << "Hello world !" << std::endl;
-	std::cout << "Input a word: ";
-	std::cin >> buffer;
-	std::cout << "You entered: [" << buffer << "]" << std::endl;
+	(void)instance;
 	return (0);
 }
