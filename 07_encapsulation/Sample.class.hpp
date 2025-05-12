@@ -5,23 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 07:53:34 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 22:20:04 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 22:12:44 by julien            #+#    #+#             */
+/*   Updated: 2025/05/12 22:20:24 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	SAMPLE_CLASS_H
+#ifndef SAMPLE_CLASS_H
 # define SAMPLE_CLASS_H
 
 class	Sample
 {
 	public:
-		int		Foo;
+		int		publicFoo;
 
 		Sample(void);
 		~Sample(void);
 
-		void	Bar(void);
+		void	publicBar(void) const;
+
+	private:
+		int		_privateFoo;
+
+		void	_privateBar(void) const;
 };
 
 #endif

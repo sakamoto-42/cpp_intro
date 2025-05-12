@@ -6,17 +6,17 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 07:40:29 by julien            #+#    #+#             */
-/*   Updated: 2025/04/30 07:56:06 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/12 22:20:08 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SAMPLE_CLASS_H
 # define SAMPLE_CLASS_H
 
-class Sample
+class	Sample
 {
 	public:
-		int	Foo;
+		int		Foo;
 
 		Sample(void);
 		~Sample(void);

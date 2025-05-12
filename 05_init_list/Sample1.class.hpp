@@ -6,14 +6,14 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 08:26:58 by julien            #+#    #+#             */
-/*   Updated: 2025/04/30 08:43:39 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/03 13:24:23 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SAMPLE1_CLASS_H
 # define SAMPLE1_CLASS_H
 
-class Sample1
+class	Sample1
 {
 	public:
 		char	a1;

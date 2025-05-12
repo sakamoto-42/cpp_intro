@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.hpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 07:53:34 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 22:20:04 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 22:06:42 by julien            #+#    #+#             */
+/*   Updated: 2025/05/12 22:09:25 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	SAMPLE_CLASS_H
-# define SAMPLE_CLASS_H
+#include "Sample.class.hpp"
+#include <iostream>
 
-class	Sample
+int	main(void)
 {
-	public:
-		int		Foo;
+	Sample	instance(3.14f);
 
-		Sample(void);
-		~Sample(void);
-
-		void	Bar(void);
-};
-
-#endif
+	instance.Bar();
+	return (0);
+}
