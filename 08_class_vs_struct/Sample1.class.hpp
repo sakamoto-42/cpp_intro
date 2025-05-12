@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.hpp                                   :+:      :+:    :+:   */
+/*   Sample1.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 13:23:06 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 20:46:36 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 20:44:05 by julien            #+#    #+#             */
+/*   Updated: 2025/05/12 20:48:24 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_H
-# define SAMPLE_CLASS_H
+#ifndef SAMPLE1_CLASS_H
+# define SAMPLE1_CLASS_H
 
-class	Sample
+struct	Sample1
 {
-	public:
-		float const	pi;
-		int			qd;
-	
-		Sample(float const f);
-		~Sample(void);
+	int		foo;
 
-		void		Bar(void) const;
+	Sample1(void);
+	~Sample1(void);
+
+	void	Bar(void) const;
 };
 
 #endif

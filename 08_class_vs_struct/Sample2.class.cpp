@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.hpp                                   :+:      :+:    :+:   */
+/*   Sample2.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 13:23:06 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 20:46:36 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 20:51:28 by julien            #+#    #+#             */
+/*   Updated: 2025/05/12 20:57:18 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_H
-# define SAMPLE_CLASS_H
+#include <iostream>
+#include "Sample2.class.hpp"
 
-class	Sample
+Sample2::Sample2(void)
 {
-	public:
-		float const	pi;
-		int			qd;
-	
-		Sample(float const f);
-		~Sample(void);
+	std::cout << "Constructor called" << std::endl;
+	return ;
+}
 
-		void		Bar(void) const;
-};
+Sample2::~Sample2(void)
+{
+	std::cout << "Destructor called" << std::endl;
+	return ;
+}
 
-#endif
+void	Sample2::Bar(void) const
+{
+	std::cout << "Member function Bar called" << std::endl;
+	return ;
+}

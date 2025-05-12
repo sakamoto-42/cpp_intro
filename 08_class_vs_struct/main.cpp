@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.hpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 13:23:06 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 20:46:36 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 20:49:35 by julien            #+#    #+#             */
+/*   Updated: 2025/05/12 20:57:08 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_H
-# define SAMPLE_CLASS_H
+#include <iostream>
+#include "Sample1.class.hpp"
+#include "Sample2.class.hpp"
 
-class	Sample
+int	main(void)
 {
-	public:
-		float const	pi;
-		int			qd;
-	
-		Sample(float const f);
-		~Sample(void);
+	Sample1	instance1;
+	//Sample2	instance2;
 
-		void		Bar(void) const;
-};
-
-#endif
+	instance1.Bar();
+	//instance2.Bar();
+	return (0);
+}
