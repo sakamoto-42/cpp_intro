@@ -5,36 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 22:00:43 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 22:17:43 by julien           ###   ########.fr       */
+/*   Created: 2025/05/13 22:12:51 by julien            #+#    #+#             */
+/*   Updated: 2025/05/13 22:16:43 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Sample.class.hpp"
 
-Sample::Sample(int v) : _foo(v)
+Sample::Sample(void)
 {
-	std::cout << "Constructor called" <<std::endl;
-	return ;
+	std::cout << "Constructor called" << std::endl;
+	Sample::_nbInst++;
+	return ; 
 }
 
 Sample::~Sample(void)
 {
-	std::cout << "Destructor called" <<std::endl;
+	std::cout << "Destructor called" << std::endl;
+	Sample::_nbInst--;
 	return ;
 }
 
-int	Sample::getFoo(void) const
+int	Sample::getNbInst(void)
 {
-	return (this->_foo);
+	return (Sample::_nbInst);
 }
 
-int	Sample::compare(Sample *other) const
-{
-	if (this->_foo < other->getFoo())
-		return (-1);
-	else if (this->_foo > other->getFoo())
-		return (1);
-	return (0);
-}
+int	Sample::_nbInst = 0;

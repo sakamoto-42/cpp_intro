@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.cpp                                   :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 22:00:43 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 22:17:43 by julien           ###   ########.fr       */
+/*   Created: 2025/05/13 22:17:05 by julien            #+#    #+#             */
+/*   Updated: 2025/05/13 22:26:43 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Sample.class.hpp"
 
-Sample::Sample(int v) : _foo(v)
+void	ft_print_nbInst(void)
 {
-	std::cout << "Constructor called" <<std::endl;
+	std::cout << "Number of instances : " << Sample::getNbInst() << std::endl;
 	return ;
 }
 
-Sample::~Sample(void)
+void	f0(void)
 {
-	std::cout << "Destructor called" <<std::endl;
+	Sample	instance;
+
+	ft_print_nbInst();
 	return ;
 }
 
-int	Sample::getFoo(void) const
+void	f1(void)
 {
-	return (this->_foo);
+	Sample	instance;
+
+	ft_print_nbInst();
+	f0();
+	ft_print_nbInst();
+	return ;
 }
 
-int	Sample::compare(Sample *other) const
+int	main(void)
 {
-	if (this->_foo < other->getFoo())
-		return (-1);
-	else if (this->_foo > other->getFoo())
-		return (1);
+	ft_print_nbInst();
+	f1();
+	ft_print_nbInst();
 	return (0);
 }
