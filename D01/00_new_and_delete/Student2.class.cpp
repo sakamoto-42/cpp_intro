@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new2.cpp                                           :+:      :+:    :+:   */
+/*   Student2.class.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 15:54:11 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 16:12:07 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 18:39:49 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 18:43:51 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include "Student2.class.hpp"
 
-class	Student
+Student::Student(void) : _login("ldefault")
 {
-	private:
-		std::string _login;
-	
-	public:
-		Student(void) : _login("ldefault")
-		{
-			std::cout << "Student " << this->_login << " is born" << std::endl;
-		}
+	std::cout << "Student " << this->_login << " is born" << std::endl;
+}
 
-		~Student(void)
-		{
-			std::cout << "Student " << this->_login << " died" << std::endl;
-		}
-};
-
-int	main(void)
+Student::~Student(void)
 {
-	Student	*students;
-
-	students = new Student[42];
-	// Do some stuff here
-	delete [] students;
-	return (0);
+	std::cout << "Student " << this->_login << " died" << std::endl;
 }
