@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample1.class.cpp                                  :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 20:51:28 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 20:57:12 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 20:44:05 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 18:58:35 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Sample1.class.hpp"
+#ifndef SAMPLE_CLASS_H
+# define SAMPLE_CLASS_H
 
-Sample1::Sample1(void)
+struct	Sample
 {
-	std::cout << "Constructor called" << std::endl;
-	return ;
-}
+	int		foo;
 
-Sample1::~Sample1(void)
-{
-	std::cout << "Destructor called" << std::endl;
-	return ;
-}
+	Sample(void);
+	~Sample(void);
 
-void	Sample1::Bar(void) const
-{
-	std::cout << "Member function Bar called" << std::endl;
-	return ;
-}
+	void	Bar(void) const;
+};
+
+#endif

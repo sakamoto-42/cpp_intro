@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample2.class.cpp                                  :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 20:51:28 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 20:57:18 by julien           ###   ########.fr       */
+/*   Created: 2025/05/12 20:49:35 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:00:56 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Sample2.class.hpp"
+#include "Sample.class.hpp"
 
-Sample2::Sample2(void)
+int	main(void)
 {
-	std::cout << "Constructor called" << std::endl;
-	return ;
-}
+	Sample	instance;
 
-Sample2::~Sample2(void)
-{
-	std::cout << "Destructor called" << std::endl;
-	return ;
-}
-
-void	Sample2::Bar(void) const
-{
-	std::cout << "Member function Bar called" << std::endl;
-	return ;
+	instance.Bar();
+	return (0);
 }
