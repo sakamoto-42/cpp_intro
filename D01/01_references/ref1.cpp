@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new2.cpp                                           :+:      :+:    :+:   */
+/*   ref1.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 15:54:11 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 16:12:07 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 16:06:26 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 16:17:26 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
-
-class	Student
-{
-	private:
-		std::string _login;
-	
-	public:
-		Student(void) : _login("ldefault")
-		{
-			std::cout << "Student " << this->_login << " is born" << std::endl;
-		}
-
-		~Student(void)
-		{
-			std::cout << "Student " << this->_login << " died" << std::endl;
-		}
-};
 
 int	main(void)
 {
-	Student	*students;
-
-	students = new Student[42];
-	// Do some stuff here
-	delete [] students;
+	int	numberOfBalls;
+	int	*ballsPtr;
+	int	&ballsRef = numberOfBalls;
+	
+	numberOfBalls = 42;
+	ballsPtr = &numberOfBalls;
+	std::cout << numberOfBalls << " " << *ballsPtr << " " << ballsRef << std::endl;
+	*ballsPtr = 21;
+	std::cout << numberOfBalls << std::endl;
+	ballsRef = 84;
+	std::cout << numberOfBalls << std::endl;
 	return (0);
 }
