@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fstream1.cpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 16:55:58 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 17:00:45 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 19:18:28 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:20:02 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <fstream>
+#include "Student.class.hpp"
 
 int	main(void)
 {
-	std::ifstream	ifs("numbers");
-	unsigned int	dst;
-	unsigned int	dst2;
+	Student			bob = Student("bfubar");
+	Student const	jim = Student("jfubar");
 
-	ifs >> dst >> dst2;
-	std::cout << dst << " " << dst2 << std::endl;
-	ifs.close();
-	std::ofstream	ofs("test.out");
-	ofs << "I like ponies a whole damn lot" << std::endl;
-	ofs.close();
+	std::cout << bob.getLoginRefConst() << " " << jim.getLoginRefConst() << std::endl;
+	std::cout << *(bob.getLoginPtrConst()) << " " << *(jim.getLoginPtrConst()) << std::endl;
+	bob.getLoginRef() = "bobfubar";
+	std::cout << bob.getLoginRefConst() << std::endl;
+	*(bob.getLoginPtr()) = "bobbyfubar";
+	std::cout << bob.getLoginRefConst() << std::endl;
 	return (0);
 }

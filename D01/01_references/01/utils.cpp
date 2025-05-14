@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Student1.class.cpp                                 :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 18:32:16 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 18:34:55 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 16:18:08 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:16:58 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "Student1.class.hpp"
+#include "utils.hpp"
 
-Student::Student(std::string login) : _login(login)
+void	byPtr(std::string *str)
 {
-	std::cout << "Student " << this->_login << " is born" << std::endl;
+	*str += " and ponies";
 }
 
-Student::~Student(void)
+void	byConstPtr(std::string const *str)
 {
-	std::cout << "Student " << this->_login << " died" << std::endl;
+	std::cout << *str << std::endl;
+}
+
+void	byRef(std::string &str)
+{
+	str += " and ponies";
+}
+
+void	byConstRef(std::string const &str)
+{
+	std::cout << str << std::endl;
 }

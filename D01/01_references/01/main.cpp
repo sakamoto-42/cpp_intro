@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ref1.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 16:06:26 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 16:17:26 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 19:10:31 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:12:28 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
+#include "utils.hpp"
 
-int	main(void)
+int		main(void)
 {
-	int	numberOfBalls;
-	int	*ballsPtr;
-	int	&ballsRef = numberOfBalls;
-	
-	numberOfBalls = 42;
-	ballsPtr = &numberOfBalls;
-	std::cout << numberOfBalls << " " << *ballsPtr << " " << ballsRef << std::endl;
-	*ballsPtr = 21;
-	std::cout << numberOfBalls << std::endl;
-	ballsRef = 84;
-	std::cout << numberOfBalls << std::endl;
+	std::string	str;
+
+	str = "I like butterflies";
+	std::cout << str << std::endl;
+	byPtr(&str);
+	byConstPtr(&str);
+	str = "I like otters";
+	std::cout << str << std::endl;
+	byRef(str);
+	byConstRef(str);
 	return (0);
 }

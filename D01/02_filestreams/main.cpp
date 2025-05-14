@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Student1.class.hpp                                 :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 18:25:11 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 18:31:49 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 16:55:58 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:29:37 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STUDENT1_CLASS_HPP
-# define STUDENT1_CLASS_HPP
-# include <string>
+#include <iostream>
+#include <fstream>
 
-class	Student
+int	main(void)
 {
-	private:
-		std::string _login;
-	
-	public:
-		Student(std::string login);
-		~Student(void);
-};
+	std::ifstream	ifs("numbers.txt");
+	unsigned int	dst;
+	unsigned int	dst2;
 
-#endif
+	ifs >> dst >> dst2;
+	std::cout << dst << " " << dst2 << std::endl;
+	ifs.close();
+	std::ofstream	ofs("test.txt");
+	ofs << "I like ponies a whole damn lot" << std::endl;
+	ofs.close();
+	return (0);
+}

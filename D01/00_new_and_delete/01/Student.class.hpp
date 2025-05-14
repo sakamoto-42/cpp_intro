@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main2.cpp                                          :+:      :+:    :+:   */
+/*   Student.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 18:39:04 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 18:39:37 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 18:40:38 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 19:22:19 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Student2.class.hpp"
+#ifndef STUDENT_CLASS_HPP
+# define STUDENT_CLASS_HPP
+# include <string>
 
-int	main(void)
+class	Student
 {
-	Student	*students;
+	private:
+		std::string _login;
+	
+	public:
+		Student(void);
+		~Student(void);
+};
 
-	students = new Student[42];
-	// Do some stuff here
-	delete [] students;
-	return (0);
-}
+#endif
