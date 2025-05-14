@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample2.class.hpp                                  :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 08:26:58 by julien            #+#    #+#             */
-/*   Updated: 2025/05/03 13:24:27 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 18:52:15 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 18:53:53 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE2_CLASS_H
-# define SAMPLE2_CLASS_H
+#include "Sample.class.hpp"
+#include <iostream>
 
-class	Sample2
+int	main(void)
 {
-	public:
-		char	a1;
-		int		a2;
-		float	a3;
+	Sample	instance('z', 13, 3.14f);
 
-		Sample2(char p1, int p2, float p3);
-		~Sample2(void);
-};
-
-#endif
+	(void)instance;
+	return (0);
+}
