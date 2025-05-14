@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 16:18:08 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 16:22:47 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/14 16:26:10 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	byPtr(std::string *str)
 	*str += " and ponies";
 }
 
-void	byConstPtr(std::string const * str)
+void	byConstPtr(std::string const *str)
 {
 	std::cout << *str << std::endl;
 }
