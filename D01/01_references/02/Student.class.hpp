@@ -6,12 +6,13 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:20:26 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 19:23:49 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/15 15:53:36 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STUDENT_CLASS_HPP
 # define STUDENT_CLASS_HPP
+
 # include <string>
 
 class	Student

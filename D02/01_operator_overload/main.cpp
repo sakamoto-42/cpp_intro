@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 19:12:45 by julien            #+#    #+#             */
-/*   Updated: 2025/05/15 15:53:29 by julien           ###   ########.fr       */
+/*   Created: 2025/05/15 16:37:48 by julien            #+#    #+#             */
+/*   Updated: 2025/05/15 16:45:29 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_HPP
-# define UTILS_HPP
+#include <iostream>
+#include "Integer.class.hpp"
 
-# include <string>
+int	main(void)
+{
+	Integer	x(30);
+	Integer	y(10);
+	Integer	z(0);
 
-void	byPtr(std::string *str);
-void	byConstPtr(std::string const *str);
-void	byRef(std::string &str);
-void	byConstRef(std::string const &str);
-
-#endif
+	std::cout << "Value of x : " << x << std::endl;
+	std::cout << "Value of y : " << y << std::endl;
+	y = Integer(12);
+	std::cout << "Value of y : " << y << std::endl;
+	std::cout << "Value of z : " << z << std::endl;
+	z = x + y;
+	std::cout << "Value of z : " << z << std::endl;
+	return (0);
+}
