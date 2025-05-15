@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 19:23:35 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 19:27:05 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:31:25 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Student::Student(std::string const &login) : _login(login)
 {
+	return ;
 }
 
 std::string	&Student::getLoginRef(void)

@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 16:18:08 by julien            #+#    #+#             */
-/*   Updated: 2025/05/15 13:32:10 by julien           ###   ########.fr       */
+/*   Created: 2025/05/15 13:42:30 by julien            #+#    #+#             */
+/*   Updated: 2025/05/15 13:47:37 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "utils.hpp"
+#include "Sample.class.hpp"
 
-void	byPtr(std::string *str)
+int	main(void)
 {
-	*str += " and ponies";
-	return ;
-}
+	Sample	instance;
 
-void	byConstPtr(std::string const *str)
-{
-	std::cout << *str << std::endl;
-	return ;
-}
-
-void	byRef(std::string &str)
-{
-	str += " and ponies";
-	return ;
-}
-
-void	byConstRef(std::string const &str)
-{
-	std::cout << str << std::endl;
-	return ;
+	instance.Bar('a');
+	instance.Bar(42);
+	instance.Bar(3.14f);
+	instance.Bar(instance);
+	return (0);
 }

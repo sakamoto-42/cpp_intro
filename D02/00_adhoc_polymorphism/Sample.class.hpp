@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.cpp                                          :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 16:18:08 by julien            #+#    #+#             */
-/*   Updated: 2025/05/15 13:32:10 by julien           ###   ########.fr       */
+/*   Created: 2025/05/14 20:05:54 by julien            #+#    #+#             */
+/*   Updated: 2025/05/14 20:08:56 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "utils.hpp"
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
-void	byPtr(std::string *str)
+class	Sample
 {
-	*str += " and ponies";
-	return ;
-}
+	public:
+		Sample(void);
+		~Sample(void);
 
-void	byConstPtr(std::string const *str)
-{
-	std::cout << *str << std::endl;
-	return ;
-}
+		void	Bar(char const c) const;
+		void	Bar(int const n) const;
+		void	Bar(float const z) const;
+		void	Bar(Sample const &i) const;
+};
 
-void	byRef(std::string &str)
-{
-	str += " and ponies";
-	return ;
-}
-
-void	byConstRef(std::string const &str)
-{
-	std::cout << str << std::endl;
-	return ;
-}
+#endif
