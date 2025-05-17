@@ -6,12 +6,12 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 08:26:58 by julien            #+#    #+#             */
-/*   Updated: 2025/05/14 18:51:18 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/17 16:20:08 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_H
-# define SAMPLE_CLASS_H
+#ifndef SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 class	Sample
 {

@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 22:31:53 by julien            #+#    #+#             */
-/*   Updated: 2025/05/12 22:39:04 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/17 16:30:20 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	instance.publicFoo = 42;
 	std::cout << "Instance publicFoo: " << instance.publicFoo << std::endl;
 	//instance._privateFoo = 42;
-	//std::cout << "Instance _privateFoo: " << instance._privateFoo << std::endl;
+	//std::cout << "Instance _privateFoo: ";
+	//std::cout << instance._privateFoo << std::endl;
 	instance.publicBar();
 	//instance._privateBar();
 	return (0);

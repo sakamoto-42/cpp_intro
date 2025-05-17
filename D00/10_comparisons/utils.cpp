@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/14 16:06:26 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 16:59:10 by julien           ###   ########.fr       */
+/*   Created: 2025/05/17 16:42:45 by julien            #+#    #+#             */
+/*   Updated: 2025/05/17 16:54:03 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "utils.hpp"
 
-int	main(void)
+void	ft_compare_instances_physically(Sample *a,
+	Sample *b)
 {
-	int	numberOfBalls;
-	int	*ballsPtr;
-	int	&ballsRef = numberOfBalls;
-	
-	numberOfBalls = 42;
-	ballsPtr = &numberOfBalls;
-	std::cout << numberOfBalls << " ";
-	std::cout << *ballsPtr << " ";
-	std::cout << ballsRef << std::endl;
-	*ballsPtr = 21;
-	std::cout << numberOfBalls << std::endl;
-	ballsRef = 84;
-	std::cout << numberOfBalls << std::endl;
-	return (0);
+	if (a == b)
+		std::cout << "physically equal" << std::endl;
+	else
+		std::cout << "not physically equal" << std::endl;
+}
+
+void	ft_compare_instances_structurally(Sample a,
+	Sample *b)
+{
+	if (a.compare(b) == 0)
+		std::cout << "structurally equal" << std::endl;
+	else
+		std::cout << "not structurally equal" << std::endl;
 }

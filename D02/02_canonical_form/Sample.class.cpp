@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 09:20:38 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 10:01:28 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/17 17:03:10 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,23 @@ Sample::Sample(void) : _foo(0)
 
 Sample::Sample(int const n) : _foo(n)
 {
-	std::cout << "Parametric constructor called whith value " << n << std::endl;
+	std::cout << "Parametric constructor called whith value ";
+	std::cout << n << std::endl;
 	return ;
 }
 
 Sample::Sample(Sample const &src)
 {
-	std::cout << "Copy constructor called with value " << src.getFoo() << std::endl;
+	std::cout << "Copy constructor called with value ";
+	std::cout << src.getFoo() << std::endl;
 	*this = src;
 	return ;
 }
 
 Sample::~Sample(void)
 {
-	std::cout << "Destructor called with value " << this->_foo << std::endl;
+	std::cout << "Destructor called with value ";
+	std::cout << this->_foo << std::endl;
 	return ;
 }
 
@@ -45,7 +48,8 @@ int	Sample::getFoo(void) const
 
 Sample	&Sample::operator=(Sample const &rhs)
 {
-	std::cout << "Assignment operator called with value " << rhs.getFoo() << std::endl;
+	std::cout << "Assignment operator called with value ";
+	std::cout << rhs.getFoo() << std::endl;
 	if (this != &rhs)
 		this->_foo = rhs.getFoo();
 	return (*this);

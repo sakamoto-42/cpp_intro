@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.class.hpp                                   :+:      :+:    :+:   */
+/*   heritage1.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 20:44:05 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 16:27:44 by julien           ###   ########.fr       */
+/*   Created: 2025/05/17 10:22:47 by julien            #+#    #+#             */
+/*   Updated: 2025/05/17 10:29:33 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_HPP
-# define SAMPLE_CLASS_HPP
+#include <string>
 
-struct	Sample
+class	Cat
 {
-	int		foo;
+	public:
+		Cat(void);
+		Cat(Cat const &src);
+		virtual	~Cat(void);
 
-	Sample(void);
-	~Sample(void);
+		Cat	&operator=(Cat const &rhs);
 
-	void	Bar(void) const;
+		void	run(int distance);
+		void	scornSomeone(std::string const &target);
+
+	private:
+		int	_numberOfLegs;
 };
 
-#endif
