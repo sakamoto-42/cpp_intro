@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:14:15 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:15:29 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:02:20 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,13 @@ Cat	&Cat::operator=(Cat const &rhs)
 void	Cat::scornSomeone(std::string const &target)
 {
 	std::cout << "scorn " << target << std::endl;
+	return ;
 }
 
 void	Cat::call(void)
 {
 	std::cout << "Meow !" << std::endl;
+	return ;
 }
 
 std::ostream	&operator<<(std::ostream &o, Cat const &i)

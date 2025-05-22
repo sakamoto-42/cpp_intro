@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Leg.class.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 15:59:36 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 19:41:52 by julien           ###   ########.fr       */
+/*   Created: 2025/05/22 18:35:12 by julien            #+#    #+#             */
+/*   Updated: 2025/05/22 19:46:28 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Quadruped.class.hpp"
-#include "Dog.class.hpp"
+#include "Leg.class.hpp"
 
-int	main(void)	// Can only access run()
+Leg::Leg(void)
 {
-	Dog	Cricket("Cricket");
-
-	std::cout << std::endl;
-	Cricket.identify();
-	Cricket.run();
-	Cricket.bark();
-	Cricket.showLegsStatus();
-	std::cout << std::endl;
+	std::cout << "Leg : Constructor called" << std::endl;
+	return ;
 }

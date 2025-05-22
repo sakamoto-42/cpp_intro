@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:14:31 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:16:06 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:02:36 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ Otter	&Otter::operator=(Otter const &rhs)
 void	Otter::call(void)
 {
 	std::cout << "Hiss !" << std::endl;
+	return ;
 }
 
 std::ostream	&operator<<(std::ostream &o, Otter const &i)

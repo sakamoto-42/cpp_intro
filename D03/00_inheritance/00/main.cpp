@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:39:17 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:43:51 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:01:25 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int	main(void)
 	PinkiePie.doMagic("Guppy");
 	std::cout << "PinkiePie ";
 	Guppy.run(25);
+	return (0);
 }

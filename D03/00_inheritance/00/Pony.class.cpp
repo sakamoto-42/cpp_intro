@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:49:02 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 14:00:47 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:01:48 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ Pony::~Pony(void)
 void	Pony::run(int distance)
 {
 	std::cout << "run " << distance << " meters" << std::endl;
+	return ;
 }
 
 void	Pony::doMagic(std::string const &target)
 {
 	std::cout << "do magic on " << target << std::endl;
+	return ;
 }
 
 int	Pony::getNumberOfLegs(void) const

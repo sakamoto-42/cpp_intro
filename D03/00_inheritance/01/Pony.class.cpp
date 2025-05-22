@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:14:46 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:36:52 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:02:48 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,13 @@ Pony	&Pony::operator=(Pony const &rhs)
 void	Pony::doMagic(std::string const &target)
 {
 	std::cout << "do magic on " << target << std::endl;
+	return ;
 }
 
 void	Pony::call(void)
 {
 	std::cout << "Neigh !" << std::endl;
+	return ;
 }
 
 std::ostream	&operator<<(std::ostream &o, Pony const &i)

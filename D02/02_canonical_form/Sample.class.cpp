@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 09:20:38 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 17:03:10 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 18:47:36 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Sample::Sample(void) : _foo(0)
 
 Sample::Sample(int const n) : _foo(n)
 {
-	std::cout << "Parametric constructor called whith value ";
+	std::cout << "Parametric constructor called with value ";
 	std::cout << n << std::endl;
 	return ;
 }

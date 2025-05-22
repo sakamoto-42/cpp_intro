@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:13:34 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:43:13 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:02:08 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,11 @@ Animal::Animal(void) : _numberOfLegs(0)
 
 Animal::Animal(int const n) : _numberOfLegs(n)
 {
-	std::cout << "Animal : Parametric constructor called whith ";
+	std::cout << "Animal : Parametric constructor called with ";
 	std::cout << n << " legs" << std::endl;
 	return ;
 }
 
-// Appelle le constructeur de copie d'Animal
 Animal::Animal(Animal const &src)
 {
 	std::cout << "Animal : Copy constructor called" << std::endl;
@@ -44,16 +43,19 @@ Animal::~Animal(void)
 void	Animal::run(int distance)
 {
 	std::cout << "run " << distance << " meters" << std::endl;
+	return ;
 }
 
 void	Animal::eat(std::string const &what)
 {
 	std::cout << "eat " << what << std::endl;
+	return ;
 }
 
 void	Animal::walk(int distance)
 {
 	std::cout << "walk " << distance << " meters" << std::endl;
+	return ;
 }
 
 int		Animal::getNumberOfLegs(void) const

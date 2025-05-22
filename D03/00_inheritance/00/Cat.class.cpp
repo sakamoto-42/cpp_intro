@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:23:03 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 14:12:29 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:01:18 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ Cat::~Cat(void)
 void	Cat::run(int distance)
 {
 	std::cout << "run " << distance << " meters" << std::endl;
+	return ;
 }
 
 void	Cat::scornSomeone(std::string const &target)
 {
 	std::cout << "scorn " << target << std::endl;
+	return ;
 }
 
 int	Cat::getNumberOfLegs(void) const

@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 15:18:27 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 15:45:20 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 19:02:27 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,5 @@ int	main(void)
 	std::cout << "Ollie ";
 	Guppy.run(1);
 	std::cout << std::endl;
+	return (0);
 }
