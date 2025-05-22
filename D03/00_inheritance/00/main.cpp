@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:39:17 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 11:53:24 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 15:43:51 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	Guppy.scornSomeone("Pinkie Pie");
 	std::cout << "Guppy ";
 	Guppy.run(10);
-
+	std::cout << std::endl;
 	std::cout << "Pinkie Pie have ";
 	std::cout << PinkiePie.getNumberOfLegs() << " legs" << std::endl;
 	std::cout << "PinkiePie ";

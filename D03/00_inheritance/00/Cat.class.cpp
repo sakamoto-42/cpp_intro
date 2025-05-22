@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:23:03 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 11:45:28 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 14:12:29 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 Cat::Cat(void) : _numberOfLegs(4)
 {
 	std::cout << "Cat : Default constructor called" << std::endl;
+	return ;
+}
+
+Cat::Cat(Cat const &src)
+{
+	std::cout << "Cat : Copy constructor called with value ";
+	std::cout << src.getNumberOfLegs() << std::endl;
+	*this = src;
 	return ;
 }
 
@@ -38,4 +46,19 @@ void	Cat::scornSomeone(std::string const &target)
 int	Cat::getNumberOfLegs(void) const
 {
 	return (this->_numberOfLegs);
+}
+
+Cat	&Cat::operator=(Cat const &rhs)
+{
+	std::cout << "Cat : Assignment operator called with value ";
+	std::cout << rhs.getNumberOfLegs() << std::endl;
+	if (this != &rhs)
+		this->_numberOfLegs = rhs.getNumberOfLegs();
+	return (*this);
+}
+
+std::ostream	&operator<<(std::ostream &o, Cat const &i)
+{
+	o << "Cat : The value of _numberOfLegs is : " << i.getNumberOfLegs();
+	return (o);
 }

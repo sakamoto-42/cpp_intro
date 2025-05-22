@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:11:00 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 11:46:56 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 14:00:18 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ class	Pony
 	private:
 		int	_numberOfLegs;
 };
+
+std::ostream	&operator<<(std::ostream &o, Pony const &i);
 
 #endif

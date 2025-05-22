@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.class.hpp                                      :+:      :+:    :+:   */
+/*   Otter.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 11:09:10 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 14:02:33 by julien           ###   ########.fr       */
+/*   Created: 2025/05/22 13:09:12 by julien            #+#    #+#             */
+/*   Updated: 2025/05/22 15:12:48 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_CLASS_HPP
-# define CAT_CLASS_HPP
+#ifndef OTTER_CLASS_HPP
+# define OTTER_CLASS_HPP
 
 # include <string>
+# include "Animal.class.hpp"
 
-class	Cat
+class	Otter : public Animal
 {
 	public:
-		Cat(void);
-		Cat(Cat const &src);
-		virtual	~Cat(void);
+		Otter(void);
+		Otter(Otter const &src);
+		virtual	~Otter(void);
 
-		Cat	&operator=(Cat const &rhs);
-
-		void	run(int distance);
-		void	scornSomeone(std::string const &target);
-		int		getNumberOfLegs(void) const;
-
-	private:
-		int	_numberOfLegs;
+		Otter	&operator=(Otter const &rhs);
+		
+		// Implementation de la methode virtuelle pure d'Animal
+		void    call(void);
 };
 
-std::ostream	&operator<<(std::ostream &o, Cat const &i);
+std::ostream	&operator<<(std::ostream &o, Otter const &i);
 
 #endif
