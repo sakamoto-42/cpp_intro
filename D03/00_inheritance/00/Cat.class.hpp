@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   heritage1.cpp                                      :+:      :+:    :+:   */
+/*   Cat.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/17 10:22:47 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 10:29:33 by julien           ###   ########.fr       */
+/*   Created: 2025/05/22 11:09:10 by julien            #+#    #+#             */
+/*   Updated: 2025/05/22 11:38:33 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef CAT_CLASS_HPP
+# define CAT_CLASS_HPP
+
+# include <string>
 
 class	Cat
 {
@@ -23,8 +26,9 @@ class	Cat
 
 		void	run(int distance);
 		void	scornSomeone(std::string const &target);
-
+		int		getNumberOfLegs(void) const;
 	private:
 		int	_numberOfLegs;
 };
 
+#endif

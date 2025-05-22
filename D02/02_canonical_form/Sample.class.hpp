@@ -6,12 +6,12 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 08:54:33 by julien            #+#    #+#             */
-/*   Updated: 2025/05/17 17:06:39 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/22 11:09:46 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SAMPLE_CLASS_HPP
-#define SAMPLE_CLASS_HPP
+# define SAMPLE_CLASS_HPP
 
 # include <iostream>
 
