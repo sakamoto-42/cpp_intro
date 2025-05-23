@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Warrior.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 15:59:36 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 10:36:19 by julien           ###   ########.fr       */
+/*   Created: 2025/05/23 10:31:00 by julien            #+#    #+#             */
+/*   Updated: 2025/05/23 11:24:10 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Quadruped.class.hpp"
-#include "Dog.class.hpp"
+#ifndef WARRIOR_CLASS_HPP
+# define WARRIOR_CLASS_HPP
 
-int	main(void)	// Can only access run()
+# include <string>
+# include "Character.class.hpp"
+
+class	Warrior : public Character
 {
-	Dog	Cricket("Cricket");
+	public:
+		Warrior(void);
+		Warrior(Warrior const &src);
+		virtual ~Warrior(void);
 
-	std::cout << std::endl;
-	Cricket.identify();
-	Cricket.run();
-	Cricket.bark();
-	Cricket.showLegsStatus();
-	std::cout << std::endl;
-}
+		Warrior			&operator=(Warrior const &rhs);
+
+		virtual void	sayHello(std::string const &target);
+};
+
+std::ostream			&operator<<(std::ostream &o, Warrior const &i);
+
+#endif

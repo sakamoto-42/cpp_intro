@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 15:59:36 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 10:36:19 by julien           ###   ########.fr       */
+/*   Created: 2025/05/23 10:26:21 by julien            #+#    #+#             */
+/*   Updated: 2025/05/23 10:32:45 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Quadruped.class.hpp"
-#include "Dog.class.hpp"
+#ifndef CHARACTER_CLASS_HPP
+# define CHARACTER_CLASS_HPP
 
-int	main(void)	// Can only access run()
+# include <string>
+
+class	Character
 {
-	Dog	Cricket("Cricket");
+	public:
+		Character(void);
+		Character(Character const &src);
+		virtual ~Character(void);
 
-	std::cout << std::endl;
-	Cricket.identify();
-	Cricket.run();
-	Cricket.bark();
-	Cricket.showLegsStatus();
-	std::cout << std::endl;
-}
+		Character	&operator=(Character const &rhs);
+
+		void	sayHello(std::string const &target);
+};
+
+std::ostream	&operator<<(std::ostream &o, Character const &i);
+
+#endif

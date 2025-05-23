@@ -1,0 +1,53 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Warrior.class.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/23 10:48:56 by julien            #+#    #+#             */
+/*   Updated: 2025/05/23 11:02:55 by julien           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
+#include "Warrior.class.hpp"
+
+Warrior::Warrior(void)
+{
+	std::cout << "Warrior : Default constructor called" << std::endl;
+	return ;
+}
+
+Warrior::Warrior(Warrior const &src) : Character(src)
+{
+	std::cout << "Warrior : Copy constructor called" << std::endl;
+	return ;
+}
+
+Warrior::~Warrior(void)
+{
+	std::cout << "Warrior : Destructor called" << std::endl;
+	return ;
+}
+
+Warrior &Warrior::operator=(Warrior const &rhs)
+{
+	std::cout << "Warrior : Assignment operator called" << std::endl;
+	if (this != &rhs)
+		Character::operator=(rhs);
+	return (*this);
+}
+
+void	Warrior::sayHello(std::string const &target)
+{
+	std::cout << "Fuck off " << target << ", I don't like you !" << std::endl;
+	return ;
+}
+
+std::ostream	&operator<<(std::ostream &o, Warrior const &i)
+{
+	o << "This is a Warrior object";
+	o << static_cast<const Character&>(i);
+	return (o);
+}

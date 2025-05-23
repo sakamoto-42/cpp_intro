@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 15:59:36 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 10:36:19 by julien           ###   ########.fr       */
+/*   Created: 2025/05/23 10:31:50 by julien            #+#    #+#             */
+/*   Updated: 2025/05/23 10:32:19 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Quadruped.class.hpp"
-#include "Dog.class.hpp"
+#ifndef CAT_CLASS_HPP
+# define CAT_CLASS_HPP
 
-int	main(void)	// Can only access run()
+# include <string>
+
+class	Cat
 {
-	Dog	Cricket("Cricket");
+	public:
+		Cat(void);
+		Cat(Cat const &src);
+		virtual ~Cat(void);
 
-	std::cout << std::endl;
-	Cricket.identify();
-	Cricket.run();
-	Cricket.bark();
-	Cricket.showLegsStatus();
-	std::cout << std::endl;
-}
+		Cat	&operator=(Cat const &rhs);
+};
+
+#endif

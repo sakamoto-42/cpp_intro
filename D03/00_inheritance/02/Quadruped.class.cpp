@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 16:00:37 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 19:47:03 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/23 10:39:29 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 // The 4 Leg objects are automatically constructed here
 Quadruped::Quadruped(void) : _name("Unnamed Quadruped")
 {
-	std::cout << "Quadruped : Default constructor called" << std::endl;
+	std::cout << "Quadruped : Default constructor called with ";
+	std::cout << this->_name << std::endl;
 	return ;
 }
 
@@ -44,23 +45,6 @@ Quadruped::~Quadruped(void)
 	return ;
 }
 
-void	Quadruped::run(void)
-{
-	std::cout << this->_name << " runs on " << 4 << " legs" << std::endl;
-	return ;
-}
-
-void	Quadruped::identify(void) const
-{
-	std::cout << "This quadruped is named " << this->_name << std::endl;
-	return ;
-}
-
-std::string	Quadruped::getName(void) const
-{
-	return (this->_name);
-}
-
 Quadruped	&Quadruped::operator=(Quadruped const &rhs)
 {
 	int	i;
@@ -77,6 +61,23 @@ Quadruped	&Quadruped::operator=(Quadruped const &rhs)
 		}
 	}
 	return (*this);
+}
+
+void	Quadruped::run(void)
+{
+	std::cout << this->_name << " runs on " << 4 << " legs" << std::endl;
+	return ;
+}
+
+void	Quadruped::identify(void) const
+{
+	std::cout << "This quadruped is named " << this->_name << std::endl;
+	return ;
+}
+
+std::string	Quadruped::getName(void) const
+{
+	return (this->_name);
 }
 
 std::ostream	&operator<<(std::ostream &o, Quadruped const &i)

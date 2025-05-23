@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:13:34 by julien            #+#    #+#             */
-/*   Updated: 2025/05/22 19:02:08 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/23 10:37:09 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 Animal::Animal(void) : _numberOfLegs(0)
 {
-	std::cout << "Animal : Default constructor called (0 legs by default)";
-	std::cout << std::endl;
+	std::cout << "Animal : Default constructor called with ";
+	std::cout << this->_numberOfLegs << std::endl;
 	return ;
 }
 
