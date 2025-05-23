@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 10:31:50 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 10:32:19 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/23 16:44:09 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ class	Cat
 
 		Cat	&operator=(Cat const &rhs);
 };
+
+std::ostream	&operator<<(std::ostream &o, Cat const &i);
 
 #endif

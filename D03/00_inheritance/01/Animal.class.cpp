@@ -6,7 +6,7 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:13:34 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 10:37:09 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/23 16:44:08 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ Animal::~Animal(void)
 	return ;
 }
 
+Animal	&Animal::operator=(Animal const &rhs)
+{
+	std::cout << "Animal : Assignment operator called with value ";
+	std::cout << rhs.getNumberOfLegs() << std::endl;
+	if (this != &rhs)
+		this->_numberOfLegs = rhs.getNumberOfLegs();
+	return (*this);
+}
+
 void	Animal::run(int distance)
 {
 	std::cout << "run " << distance << " meters" << std::endl;
@@ -61,15 +70,6 @@ void	Animal::walk(int distance)
 int		Animal::getNumberOfLegs(void) const
 {
 	return (this->_numberOfLegs);
-}
-
-Animal	&Animal::operator=(Animal const &rhs)
-{
-	std::cout << "Animal : Assignment operator called with value ";
-	std::cout << rhs.getNumberOfLegs() << std::endl;
-	if (this != &rhs)
-		this->_numberOfLegs = rhs.getNumberOfLegs();
-	return (*this);
 }
 
 std::ostream	&operator<<(std::ostream &o, Animal const &i)

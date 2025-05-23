@@ -6,11 +6,12 @@
 /*   By: julien <julien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 10:48:56 by julien            #+#    #+#             */
-/*   Updated: 2025/05/23 11:02:55 by julien           ###   ########.fr       */
+/*   Updated: 2025/05/23 16:44:05 by julien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+
 #include "Warrior.class.hpp"
 
 Warrior::Warrior(void)
